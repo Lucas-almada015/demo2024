@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://crear.net.ar/Drive/Docs/EstilosGenerales.css" rel="stylesheet" type="text/css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CQuestrial%7CRoboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CQuestrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald%7CSpecial+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <div style="background:#3f3d55;height:180px; width:100%;margin-top:0px;position:absolute" id="divNav">
+
+
+    </div>
+    <br>
+
+    <div class="container" style="padding:20px;margin-top:-15px" id="form">
+        <h1 style="font-family: 'Questrial', sans-serif;">POST SOCIAL MEDIA</h1>
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center">
+                <img src="https://crear.net.ar/CLIENTES/EOS/Eos/undraw_mobile_interface_wakp.svg" height="140px" style="margin-top:-35px">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="" style="max-width:800px;width:97%;padding:20px;margin:auto">
+
+
+
+                <form method="POST" enctype="multipart/form-data" action="">
+
+
+                    <div class="form-group">
+                        <b style="font-family: 'Lato', sans-serif;"> <label for="exampleFormControlFile1"
+                                style="font-family: 'Lato', sans-serif;">1) Seleccione imagen</label></b>
+                    </div>
+                    <div class="col-md-12" style="cursor:pointer">
+
+                        <div class="d-flex justify-content-center">
+
+                            <div alt="Cargando Imagen..."
+                                style="background-image:url('https://crear.net.ar/CLIENTES/MBEER/MBeerWeb/ar-camera.png');background-size: cover;height:85px;width:85px;cursor:pointer;decoration:none;cursor:pointer"
+                                required="" name="imagen" id="files" type="file" accept="image/*">
+                                <label style="font-family: 'Lato', sans-serif;margin-left:-105px">Click :point_right:</label>
+                                <input type="file" class="form-control-file" id="archivo" name="archivo"
+                                    accept="image/*" required onchange="readURLIMG(this);"
+                                    style="background-image:url('Imagenes/ErrorTickets.png');background-size: cover; opacity: 0; height:80px;width:180px;cursor:pointer;margin-top:-55px;decoration:none;">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <span id="cadenaImagen" style="display:none"></span>
+                    <div class="d-flex justify-content-center">
+                        <img src="https://crear.net.ar/CLIENTES/DC/Dc/lastolite-fondo-super-blanco-137x11m.jpg"
+                            id="ImgKids"
+                            style="margin-top:20px; width:260px;  height:260px; object-fit:contain;display: none;" />
+
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="ok" style="display:none"><b style="font-family: 'Lato', sans-serif;">:muscle: Imagen Cargada.
+                                Sigue adelante.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <b style="font-family: 'Lato', sans-serif;"> <label for="exampleFormControlFile1"
+                                style="font-family: 'Lato', sans-serif;">2) Comment</label></b>
+                        <input type="text" class="text-uppercase" id="comment" name="comment" required
+                            style="font-family: 'Questrial', sans-serif;">
+                        <label for="input" class="control-label" style="text-align:left">
+                        </label><i class="bar"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <b style="font-family: 'Lato', sans-serif;"> <label for="exampleFormControlFile1"
+                                style="font-family: 'Lato', sans-serif;">3) Detalle</label></b>
+                        <input type="text" class="text-uppercase" id="detail" name="detail" required
+                            style="font-family: 'Questrial', sans-serif;">
+                        <label for="input" class="control-label" style="text-align:left">
+                        </label><i class="bar"></i>
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-center">
+                        <input type="button" value="ENVIAR" id="Enviar" name="Enviar" onmouseup="post();"
+                            style="background-color:#3f3d55;font-family: 'Lato', sans-serif;padding: 10px;color:#fff;width:220px;border:none">
+                    </div>
+
+
+            </div>
+
+
+            </form>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+    </main>
+
+    <script>
+        function readURLIMG(input) {
+            console.log(input)
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('ImgKids').style = "display:block;margin-top:20px; width:260px;  height:260px; object-fit:contain; "
+                    document.getElementById('ImgKids').src = e.target.result
+
+
+                    document.getElementById("ok").style = "display:block";
+                    document.getElementById("cadenaImagen").innerHTML = e.target.result;
+                    //$('#cadenaImagen').innerHTML(e.target.result);
+                };
+                //document.getElementById("validate").innerHTML= "true";
+                reader.readAsDataURL(input.files[0]);
+
+
+            }
+        }
+
+        async function post() {
+            //const detail = document.getElementById("detail").value
+            const comment = document.getElementById("comment").value
+            swal({
+                title: "Atención",
+                html: "Espere validando...",
+                type: "info",
+                showCancelButton: false,
+                showConfirmButton: false,
+                cancelButtonColor: "#DD6B55",
+                confirmButtonColor: "#DD6B55",
+
+            });
+            if (comment == "") {
+                swal({
+                    title: "Atención",
+                    html: "Complete los campos requeridos por favor",
+                    type: "warning",
+                    backdrop: true,
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                    showConfirmButton: true,
+                    cancelButtonColor: "#DD6B55",
+                    confirmButtonColor: "#DD6B55",
+
+                });
+                return;
+            }
+            document.querySelector('#archivo').files[0]
+            console.log("archivo" + document.querySelector('#archivo').files[0])
+            let json
+            var jsonError = JSON.stringify({ "status": "402", });
+            const imagen = document.querySelector('#archivo').files[0];
+
+            const formData = new FormData();
+            formData.append('userId', "1");
+            formData.append('archivo', imagen);
+            formData.append('comment', comment);
+            formData.append('type', "software");
+
+            await fetch('https://creardev.com.ar/instituto/socialMedia/newPost.php', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+                .then(data => {
+                    json = data
+                    console.log(json)
+                    console.log(json.status)
+                    if (json.status == 201) {
+                        swal.close()
+                        swal({
+                            title: "Atención",
+                            html: "Datos agregados con éxito",
+                            type: "success",
+                            backdrop: true,
+                            allowOutsideClick: false,
+                            showCancelButton: false,
+                            showConfirmButton: true,
+                            cancelButtonColor: "#DD6B55",
+                            confirmButtonColor: "#DD6B55",
+
+                        });
+                        document.querySelector('#archivo') == ""
+                        document.getElementById('ImgKids').src = ""
+                        document.getElementById('ImgKids').style = "margin-top:20px; width:260px;  height:260px; object-fit:contain;display: none;"
+                        document.getElementById("detail").value = ""
+                        document.getElementById("keyword").value = ""
+
+                    } else {
+                        swal({
+                            title: "Atención",
+                            html: "Algo salió mal",
+                            type: "error",
+                            showCancelButton: false,
+                            showConfirmButton: true,
+                            cancelButtonColor: "#DD6B55",
+                            confirmButtonColor: "#DD6B55",
+
+                        });
+                    }
+                })
+
+
+
+                .catch(error => {
+                    console.log("error" + error);
+                });
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
